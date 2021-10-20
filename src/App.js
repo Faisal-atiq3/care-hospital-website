@@ -15,6 +15,7 @@ import About from './About/About';
 import ContuctUs from './Contact Us/ContuctUs';
 import Register from './Register/Register';
 import Career from './Career/Career';
+import Profile from './Profile/Profile';
 
 
 
@@ -51,7 +52,11 @@ function App() {
               </Route>
               <PrivateRoute path="/booking/:serviceId">
                 <Booking></Booking>
+                
 
+              </PrivateRoute>
+              <PrivateRoute>
+              <Profile path="/profile"></Profile>
               </PrivateRoute>
 
 

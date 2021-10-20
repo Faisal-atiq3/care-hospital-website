@@ -17,12 +17,13 @@ const Menubar = () => {
     
       <Nav.Link  as={HashLink} to="/home#services">Services</Nav.Link>
       <Nav.Link as={Link} to="/contuctUs">Contuct Us</Nav.Link>
+      <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
       <Nav.Link as={Link} to="/career">Career</Nav.Link>
       <Nav.Link  as={HashLink} to="/home#experts">Experts</Nav.Link>
 
       {user?.email?
 
-       <Button onClick={logOut} variant="light">Logout</Button>:
+       <Button onClick={logOut} variant="danger">Logout</Button>:
 
       <Nav.Link  as={Link} to="/login">Login</Nav.Link>}
       <Navbar.Text>

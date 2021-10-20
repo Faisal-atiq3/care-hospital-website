@@ -48,8 +48,8 @@ const experts =[
 
 const Experts = () => {
     return (
-        <div id="experts" className="container"> 
-        <h1 className="text-primary mt-5"> Our Doctors </h1>
+        <div id="experts" className="container mx-auto w-50"> 
+        <h1 className="text-primary mt-5 w-75" > Our Doctors </h1>
             
             <div className="row">
                 {
