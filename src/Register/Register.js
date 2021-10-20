@@ -12,7 +12,7 @@ const Register = () => {
   const redirect_uri = location?.state?.from || '/';
 
 
-
+const [errorMessage,setErrorMessage]= useState('');
 const [name, setName] = useState({});
 const [email,setEmail] = useState({});
 const [password, setPassword]=useState({});
@@ -40,13 +40,11 @@ const [password, setPassword]=useState({});
         signInEmail(email, password)
         .then((userCredential) => {
             history.push(redirect_uri);
-            const user = userCredential.user;
+           
             
           })
           .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // ..
+            setErrorMessage(error.message)
           });
         
         
@@ -74,7 +72,7 @@ const [password, setPassword]=useState({});
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input type="password" onBlur={handlePassword} class="form-control" id="exampleInputPassword1"/>
         </div>
-        
+        <h5 className="text-danger"> {errorMessage}  </h5>
         <button type="submit" onClick={handleSubmit} class="btn btn-primary">Register</button>
         <br /> <br />
         

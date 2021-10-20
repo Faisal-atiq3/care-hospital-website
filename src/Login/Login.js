@@ -15,7 +15,7 @@ const Login = () => {
   const history = useHistory();
   const redirect_uri = location?.state?.from || '/';
 
-    
+   const [errorMessage,setErrorMessage] =useState('');
   const [email,setEmail] = useState({});
   const [password, setPassword]=useState({});
   
@@ -36,12 +36,9 @@ const Login = () => {
     loginUser(email,password)
     .then((userCredential) => {
       history.push(redirect_uri);
-      const user = userCredential.user;
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
+      })
+      .catch((error) => {
+     setErrorMessage(error.message);
     });
   }
   
@@ -64,7 +61,7 @@ const Login = () => {
 <label for="exampleInputPassword1" class="form-label">Password</label>
 <input type="password" onBlur={handlePassword} class="form-control" id="exampleInputPassword1"/>
 </div>
-
+<h5 className="text-danger"> {errorMessage}  </h5>
 <button type="submit" onClick={handleSubmit} class="btn btn-primary">Submit</button>
 <br /> <br />
 <h5 >Dont Have Any Account ? Please <Link to ="/register">Register</Link></h5>

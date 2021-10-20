@@ -14,6 +14,7 @@ import PrivateRoute from './Login/PrivateRoute/PrivateRoute';
 import About from './About/About';
 import ContuctUs from './Contact Us/ContuctUs';
 import Register from './Register/Register';
+import Career from './Career/Career';
 
 
 
@@ -41,6 +42,9 @@ function App() {
               </Route>
             <Route path="/contuctUs">
              <ContuctUs></ContuctUs>
+              </Route>
+            <Route path="/career">
+             <Career></Career>
               </Route>
             <Route path="/login">
               <Login></Login>
