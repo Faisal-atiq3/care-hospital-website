@@ -17,7 +17,7 @@ const Booking = () => {
     const exactService =service.filter (item=> item.id===serviceId );
 
     return (
-        <div>
+        <div className="mx-auto w-50">
             <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src={exactService[0]?.img} />
   <Card.Body>
@@ -25,7 +25,7 @@ const Booking = () => {
     <Card.Text>
       {exactService[0]?.details}
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    <Button variant="primary">See More</Button>
   </Card.Body>
 </Card>
 

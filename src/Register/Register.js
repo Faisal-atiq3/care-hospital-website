@@ -56,7 +56,8 @@ const [password, setPassword]=useState({});
 
     return (
         <div>
-             <form onSubmit={forSubmit}>
+            <h1 className="text-primary">Please Register</h1>
+             <form className="mx-auto w-50"  onSubmit={forSubmit}>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Name</label>
           <input type="name" onBlur={handleName} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
@@ -75,11 +76,15 @@ const [password, setPassword]=useState({});
         </div>
         
         <button type="submit" onClick={handleSubmit} class="btn btn-primary">Register</button>
+        <br /> <br />
+        
+            <h5>Already have an account? <Link to='/login'>Log In</Link></h5>
+        <br /> <br /> <br />
+        
+      
       </form>
 
-      <div className="mb-3 form-check">
-        <p>Already have an account? <Link to='/login'>Log In</Link></p>
-      </div>
+      
 
         </div>
        

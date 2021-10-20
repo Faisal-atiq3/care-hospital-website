@@ -51,10 +51,10 @@ const Login = () => {
 
 
   return (
-    <div id="login mx-5">
-    <h2>Please Login</h2>
+    <div id="login  ">
+    <h1 className="text-primary">Please Login</h1>
     <div>
-    <form onSubmit={forSubmit}>
+    <form className="mx-auto w-75" onSubmit={forSubmit}>
 <div class="mb-3">
 <label for="exampleInputEmail1" class="form-label">Email address</label>
 <input type="email" onBlur={handleEmail} class="form-control" id="exampleInputEmail1"/> 
@@ -66,13 +66,18 @@ const Login = () => {
 </div>
 
 <button type="submit" onClick={handleSubmit} class="btn btn-primary">Submit</button>
+<br /> <br />
+<h5 >Dont Have Any Account ? Please <Link to ="/register">Register</Link></h5>
+<br />
+    <div>-------------------------------------------------------</div>
+    <button onClick={signInUsingGoogle} className="btn btn-warning"> Google SignIn</button>
+    <br /> <br /> <br />
+
 </form>
 </div>
 
-<p>Dont Have Any Account ? Please <Link to ="/register">Register</Link></p>
-    <br /><br /><br />
-    <div>-------------------------------------------------------</div>
-    <button onClick={signInUsingGoogle} className="btn btn-warning"> Google SignIn</button>
+    
+    
 </div>
 );
 };

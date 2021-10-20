@@ -11,14 +11,14 @@ const experts =[
     {
         id:1,
         img: doc1,
-        name : 'Andrew Smith',
-        expertize: 'Denatal Sergoun '
+        name : 'Dr. Sanjoy Banerjee',
+        expertize: 'Consultant, ENT, Head & Neck Surgery '
     },
     {
         id:2,
         img: doc2,
-        name : 'Jann Paul',
-        expertize: 'Denatal Sergoun '
+        name : 'Dr. M. H. Shaheel Mahmood',
+        expertize: 'Senior Cosultant, ENT, Head & Neck Surgery '
     },
     {
         id:3,
@@ -29,20 +29,20 @@ const experts =[
     {
         id:4,
         img: doc4,
-        name : 'Sakib Anderson',
-        expertize: 'Aurthopadics Sergoun '
+        name : 'Dr. Md. Nasimul Jamal',
+        expertize: 'Consultant, ENT, Head & Neck Surgery '
     },
     {
         id:5,
         img: doc5,
-        name : 'John Cina',
+        name : ' Dr. Mst Kamrun Nahar',
         expertize: 'ENT Sergoun '
     },
     {
         id:6,
         img: doc6,
-        name : 'Triple H',
-        expertize: 'Medecine Sergoun '
+        name : 'Dr. Abu Zafor Nasrin',
+        expertize: 'Consultant, ENT, Head & Neck Surgery '
     }
 ]
 
