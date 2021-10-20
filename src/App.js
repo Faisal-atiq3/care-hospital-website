@@ -1,24 +1,69 @@
-import logo from './logo.svg';
+
 import './App.css';
 
+
+import { BrowserRouter as Router, Switch,Route } from 'react-router-dom';
+import NotFound from './NotFound/NotFound';
+import Home from './Home/Home';
+import Booking from './Booking/Booking/Booking';
+import Login from './Login/Login';
+import Menubar from './Menubar/Menubar'
+import Footer from './Footer/Footer';
+import AuthProvider from './Contexts/AuthProvider';
+import PrivateRoute from './Login/PrivateRoute/PrivateRoute';
+import About from './About/About';
+import ContuctUs from './Contact Us/ContuctUs';
+import Register from './Register/Register';
+
+
+
+
+
+
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+       <Router>
+        <Menubar></Menubar>
+        <Switch>
+          <Route  exact path="/">
+            <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+              </Route>
+            <Route path="/register">
+            <Register></Register>
+              </Route>
+            <Route path="/about">
+             <About></About>
+              </Route>
+            <Route path="/contuctUs">
+             <ContuctUs></ContuctUs>
+              </Route>
+            <Route path="/login">
+              <Login></Login>
+              </Route>
+              <PrivateRoute path="/booking/:serviceId">
+                <Booking></Booking>
+
+              </PrivateRoute>
+
+
+
+        <Route path ="*">
+          <NotFound></NotFound>
+
+        </Route>
+
+        </Switch>
+        <Footer></Footer>
+      </Router> 
+      
+    </AuthProvider>
+     
+   
   );
 }
 
